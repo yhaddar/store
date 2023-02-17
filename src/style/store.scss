@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Itim&family=Kalam:wght@300&family=Noto+Sans+Adlam+Unjoined&family=Roboto:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+        display: none;
+    }
+}
+
+:root{
+    // colors : 
+    --clr-primary-1: hsl(0deg 0% 77%);
+    --clr-primary-2: hsl(0, 0%, 0%);
+    --clr-primary-3: hsl(0, 0%, 100%);
+    --clr-primary-4: hsl(0, 100%, 50%);
+    --clr-primary-5: hsl(137, 52%, 47%);
+    --clr-primary-6: hsl(0deg 4% 48%);
+    --clr-primary-7: hsl(120, 100%, 25%);
+
+
+    // font :
+    --font-logo: 'Itim', cursive;
+    --font-primary-1: 'Roboto', sans-serif;
+    --font-primary-2: 'Noto Sans Adlam Unjoined', sans-serif;
+    --font-primary-3: 'Caveat', cursive;
+    --font-primary-4: 'Kalam', cursive;
+}
+
+
+@mixin icons {
+    width: 40px;
+    height: 37px;
+    color: var(--clr-primary-2);
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .6s ease-in-out;
+    &:active{
+        transform: scale(0.98);
+    }
+    &:hover{
+        color: var(--clr-primary-5);
+    }
+}
+
+@mixin title {
+    font: {
+        size: 31px;
+        family: var(--font-primary-2);
+        style: italic;
+        weight: bold;
+    }
+    color: var(--clr-primary-2);
+    text-transform: capitalize;
+    @media screen and (min-width: 320px) and (max-width: 720px) {
+        font: {
+            size: 22px;
+        }
+    }
+}
+
+@mixin title2 {
+    @include title;
+    font-size: 20px;
+    font-weight: 100;
+    color: var(--clr-primary-6);
+    @media screen and (min-width: 320px) and (max-width: 720px) {
+        font: {
+            size: 12px;
+        }
+    }
+}
+
+@mixin button {
+    width: 115px;
+    height: 34px;
+    background: var(--clr-primary-5);
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: center;
+    padding-top: 7px;
+    font: {
+        size: 14px;
+        family: var(--font-primary-2);
+        weight: bold;
+        style: italic;
+    }
+    color: var(--clr-primary-2);
+    text-transform: capitalize;
+    cursor: pointer;
+    &:hover{
+        transform: scale(0.98);
+    }
+}
+
+@mixin title4 {
+    font: {
+        size: 14px;
+        family: var(--font-primary-2);
+        weight: 100;
+    }
+    color: var(--clr-primary-1);
+}
+
+@mixin input {
+    width: 100%;
+    height: 55px;
+    margin-top: 20px;
+    border-radius: 3px;
+    border: 1px solid var(--clr-primary-2);
+    padding-left: 10px;
+    background: transparent;
+    font: {
+        size: 15px;
+        family: var(--font-primary-2);
+    }
+    color: var(--clr-primary-2);
+    &::placeholder{
+        font: {
+            size: 15px;
+            family: var(--font-primary-2);
+        }
+        color: var(--clr-primary-2);
+        text-transform: capitalize;
+        padding-left: 10px;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+@mixin submit {
+    width: 100px;
+    height: 41px;
+    background: var(--clr-primary-5);
+    border: none;
+    border-radius: 3px;
+    font: {
+        size: 15px;
+        family: var(--font-primary-2);
+        weight: bold;
+        style: italic;
+    }
+    color: var(--clr-primary-2);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:active{
+        transform: scale(0.98)
+    }
+    &:hover{
+        background: var(--clr-primary-7);
+    }
+}
+
+// import files scss : 
+@import './NavBar/NavSearch';
+@import './NavBar/navbar';
+@import './Home/sectionHome';
+@import './Home/NavHome';
+@import './Home/featureProduct';
+@import './Home/section2';
+@import './Shop/Nav';
+@import './Shop/Product';
+@import './Blog/NavBlog';
+@import './Blog/sectionBlog';
+@import './About//WhoWeAre';
+@import './Contact/location';
+@import './Contact/form';
+@import './Profile/FormProfile';
+@import './Shopping/ShoppingCart';
+@import './ProductShow';
+@import './footer2';

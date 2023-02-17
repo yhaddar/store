@@ -1,0 +1,2213 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Itim&family=Kalam:wght@300&family=Noto+Sans+Adlam+Unjoined&family=Roboto:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 0px;
+}
+*::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+:root {
+  --clr-primary-1: hsl(0deg 0% 77%);
+  --clr-primary-2: hsl(0, 0%, 0%);
+  --clr-primary-3: hsl(0, 0%, 100%);
+  --clr-primary-4: hsl(0, 100%, 50%);
+  --clr-primary-5: hsl(137, 52%, 47%);
+  --clr-primary-6: hsl(0deg 4% 48%);
+  --clr-primary-7: hsl(120, 100%, 25%);
+  --font-logo: "Itim", cursive;
+  --font-primary-1: "Roboto", sans-serif;
+  --font-primary-2: "Noto Sans Adlam Unjoined", sans-serif;
+  --font-primary-3: "Caveat", cursive;
+  --font-primary-4: "Kalam", cursive;
+}
+
+.loader-page {
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-primary-6);
+}
+.loader-page .wave {
+  width: 5px;
+  height: 100px;
+  background: var(--clr-primary-1);
+  margin: 10px;
+  animation: wave 1s linear infinite;
+  border-radius: 20px;
+}
+.loader-page .wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loader-page .wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loader-page .wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.loader-page .wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.loader-page .wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.loader-page .wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.loader-page .wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.loader-page .wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.loader-page .wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+@keyframes wave {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.NavSearch {
+  width: 100%;
+  height: 91px;
+  background: var(--clr-primary-1);
+  border-bottom: 1px solid var(--clr-primary-2);
+  position: fixed;
+  z-index: 1;
+}
+.NavSearch .navbar_search {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 11px;
+}
+.NavSearch .navbar_search .logo .logo, .NavSearch .navbar_search .Search .search_input .logo, .NavSearch .navbar_search .logo .Search .search_input, .NavSearch .navbar_search .Search .logo .search_input, .NavSearch .navbar_search .Search .search_input .search_input {
+  font-family: var(--font-logo);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 35px;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.NavSearch .navbar_search .Search {
+  width: 20%;
+  height: auto;
+}
+.NavSearch .navbar_search .Search .form {
+  width: 134%;
+  height: 49px;
+  position: relative;
+}
+.NavSearch .navbar_search .Search .search_input {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid var(--clr-primary-2);
+  background: none;
+  font-size: 13px;
+  font-family: var(--font-primary-1);
+  font-weight: bold;
+  font-style: normal;
+  padding-left: 5px;
+}
+.NavSearch .navbar_search .Search .search_input::-webkit-search-cancel-button {
+  display: none;
+}
+.NavSearch .navbar_search .Search .search_input::-moz-placeholder {
+  font-size: 13px;
+  font-family: var(--font-primary-1);
+  font-weight: bold;
+  font-style: normal;
+  color: var(--clr-primary-2);
+}
+.NavSearch .navbar_search .Search .search_input::placeholder {
+  font-size: 13px;
+  font-family: var(--font-primary-1);
+  font-weight: bold;
+  font-style: normal;
+  color: var(--clr-primary-2);
+}
+.NavSearch .navbar_search .Search .search_input:focus {
+  outline: none;
+}
+.NavSearch .navbar_search .Search .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  color: var(--clr-primary-2);
+  cursor: pointer;
+  border-radius: 50%;
+  background: none;
+  border: none;
+}
+.NavSearch .navbar_search .Search .btn .btn_input {
+  width: 54.5%;
+  height: auto;
+}
+.NavSearch .navbar_search .Search .btn:active {
+  transform: scale(0.98);
+}
+
+@media screen and (min-width: 320px) and (max-width: 444px) {
+  .NavSearch .navbar_search .logo .logo, .NavSearch .navbar_search .Search .search_input .logo, .NavSearch .navbar_search .logo .Search .search_input, .NavSearch .navbar_search .Search .logo .search_input, .NavSearch .navbar_search .Search .search_input .search_input {
+    font-size: 27px;
+  }
+  .NavSearch .navbar_search .Search .btn .btn_input {
+    width: 41.5%;
+    margin-right: -10px;
+  }
+}
+.NavBar {
+  width: 100%;
+  height: 61px;
+  background: var(--clr-primary-1);
+  border-bottom: 1px solid var(--clr-primary-2);
+  position: fixed;
+  margin-top: 91px;
+  z-index: 1;
+}
+.NavBar .navbar {
+  width: 58%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  float: right;
+  align-items: center;
+  padding-top: 10px;
+}
+.NavBar .navbar .ul_nav .li_nav {
+  display: inline-block;
+  margin-left: 33px;
+  margin-right: 33px;
+}
+.NavBar .navbar .ul_nav .li_nav .link {
+  font-size: 18px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  color: var(--clr-primary-2);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.6s ease-in-out;
+}
+.NavBar .navbar .ul_nav .li_nav .link:hover {
+  color: var(--clr-primary-5);
+}
+.NavBar .navbar .ul_nav .li_nav .active {
+  color: var(--clr-primary-5);
+}
+.NavBar .navbar .icons {
+  width: 20%;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.NavBar .navbar .icons .Compte .profile {
+  width: 40px;
+  height: 37px;
+  color: var(--clr-primary-2);
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+}
+.NavBar .navbar .icons .Compte .profile:active {
+  transform: scale(0.98);
+}
+.NavBar .navbar .icons .Compte .profile:hover {
+  color: var(--clr-primary-5);
+}
+.NavBar .navbar .icons .shopping .shoppingCart {
+  width: 40px;
+  height: 37px;
+  color: var(--clr-primary-2);
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+}
+.NavBar .navbar .icons .shopping .shoppingCart:active {
+  transform: scale(0.98);
+}
+.NavBar .navbar .icons .shopping .shoppingCart:hover {
+  color: var(--clr-primary-5);
+}
+.NavBar .navbar .icons .menu .menucart {
+  width: 40px;
+  height: 37px;
+  color: var(--clr-primary-2);
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
+  margin-left: 20px;
+  display: none;
+}
+.NavBar .navbar .icons .menu .menucart:active {
+  transform: scale(0.98);
+}
+.NavBar .navbar .icons .menu .menucart:hover {
+  color: var(--clr-primary-5);
+}
+.NavBar .navbar .icons .menu .menucart:nth-child(2) {
+  display: none;
+}
+
+.aside_menu {
+  width: 100%;
+  height: 100%;
+  background: var(--clr-primary-1);
+  padding-bottom: 20px;
+  margin-top: 152px;
+  display: none;
+  position: fixed;
+  z-index: 1;
+}
+.aside_menu .ul_nav {
+  padding-top: 10px;
+}
+.aside_menu .ul_nav .li_nav {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+.aside_menu .ul_nav .li_nav .link {
+  font-size: 18px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  color: var(--clr-primary-2);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.6s ease-in-out;
+}
+.aside_menu .ul_nav .li_nav .link:hover {
+  color: var(--clr-primary-3);
+}
+
+@media screen and (min-width: 320px) and (max-width: 739px) {
+  .NavBar .navbar {
+    width: 100%;
+  }
+  .NavBar .navbar .ul_nav {
+    display: none;
+  }
+  .NavBar .navbar .icons {
+    justify-content: space-between;
+  }
+  .NavBar .navbar .icons .menu .menucart {
+    display: block;
+  }
+}
+@media screen and (min-width: 740px) and (max-width: 1222px) {
+  .NavBar .navbar {
+    width: 100%;
+  }
+}
+.section_Home {
+  width: 100%;
+  height: auto;
+  background: var(--clr-primary-1);
+  padding-top: 169px;
+}
+.section_Home .home {
+  width: 100%;
+  height: 777px;
+  display: flex;
+  margin-top: -17px;
+}
+.section_Home .home .desc {
+  width: 50%;
+}
+.section_Home .home .desc .Description {
+  margin-left: 152px;
+  margin-top: 248px;
+}
+.section_Home .home .desc .Description .title1, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title3, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .link .leareMore, .New .new .section1 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3 {
+  font-size: 22px;
+  font-family: var(--font-primary-3);
+  color: var(--clr-primary-3);
+  margin-bottom: -33px;
+  margin-left: 38px;
+}
+.section_Home .home .desc .Description .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .title3 {
+  font-size: 62px;
+  font-family: var(--font-primary-4);
+  color: var(--clr-primary-3);
+  text-transform: capitalize;
+  margin-bottom: -25px;
+}
+.section_Home .home .desc .Description .title3 {
+  color: var(--clr-primary-5);
+  margin-bottom: -22px;
+}
+.section_Home .home .desc .Description .title4 {
+  font-size: 14px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-1);
+  margin-left: 8px;
+  color: var(--clr-primary-6);
+}
+.section_Home .home .desc .Description .shop_now {
+  width: 115px;
+  height: 34px;
+  background: var(--clr-primary-5);
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 14px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  font-style: italic;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.section_Home .home .desc .Description .shop_now:hover {
+  transform: scale(0.98);
+}
+.section_Home .home .cover {
+  width: 50%;
+  height: auto;
+}
+.section_Home .home .cover .img {
+  width: 86%;
+  height: 100%;
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 320px) and (max-width: 390px) {
+  .section_Home .home {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section_Home .home .desc {
+    width: 100%;
+    height: 0;
+    padding-bottom: 0;
+  }
+  .section_Home .home .desc .Description {
+    margin-left: 20px;
+    margin-top: 115px;
+  }
+  .section_Home .home .desc .Description .title1, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title3, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .link .leareMore, .New .new .section1 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3 {
+    margin-bottom: -9px;
+  }
+  .section_Home .home .desc .Description .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .title3 {
+    font-size: 36px;
+    margin-bottom: -14px;
+  }
+  .section_Home .home .desc .Description .title3 {
+    margin-bottom: -4px;
+  }
+  .section_Home .home .cover {
+    width: 100%;
+    height: auto;
+  }
+  .section_Home .home .cover .img {
+    width: 100%;
+    height: 79%;
+  }
+}
+@media screen and (min-width: 391px) and (max-width: 486px) {
+  .section_Home .home {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section_Home .home .desc {
+    width: 100%;
+    height: 0;
+    padding-bottom: 0;
+  }
+  .section_Home .home .desc .Description {
+    margin-left: 20px;
+    margin-top: 115px;
+  }
+  .section_Home .home .desc .Description .title1, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title3, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .link .leareMore, .New .new .section1 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3 {
+    margin-bottom: -9px;
+  }
+  .section_Home .home .desc .Description .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .title3 {
+    font-size: 36px;
+    margin-bottom: -14px;
+  }
+  .section_Home .home .desc .Description .title3 {
+    margin-bottom: -4px;
+  }
+  .section_Home .home .cover {
+    width: 100%;
+    height: auto;
+  }
+  .section_Home .home .cover .img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 487px) and (max-width: 600px) {
+  .section_Home .home {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section_Home .home .desc {
+    width: 100%;
+    height: 0;
+    padding-bottom: 0;
+  }
+  .section_Home .home .desc .Description {
+    margin-left: 20px;
+    margin-top: 115px;
+  }
+  .section_Home .home .desc .Description .title1, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title3, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .link .leareMore, .New .new .section1 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3 {
+    margin-bottom: -9px;
+  }
+  .section_Home .home .desc .Description .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .title3 {
+    font-size: 36px;
+    margin-bottom: -14px;
+  }
+  .section_Home .home .desc .Description .title3 {
+    margin-bottom: -4px;
+  }
+  .section_Home .home .cover {
+    width: 100%;
+    height: auto;
+  }
+  .section_Home .home .cover .img {
+    width: 72%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 766px) {
+  .section_Home .home .desc .Description {
+    margin-left: 16px;
+    margin-top: 87px;
+  }
+  .section_Home .home .desc .Description .title1, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title3, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .link .leareMore, .New .new .section1 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3 {
+    font-size: 22px;
+    margin-bottom: -9px;
+  }
+  .section_Home .home .desc .Description .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .title3 {
+    font-size: 32px;
+    margin-bottom: -18px;
+  }
+  .section_Home .home .desc .Description .title3 {
+    margin-bottom: -14px;
+  }
+  .section_Home .home .cover {
+    width: 50%;
+  }
+  .section_Home .home .cover .img {
+    width: 100%;
+    height: 40%;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1038px) {
+  .section_Home .home .desc .Description {
+    margin-left: 16px;
+    margin-top: 87px;
+  }
+  .section_Home .home .desc .Description .title1, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title3, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .link .leareMore, .New .new .section1 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3 {
+    font-size: 22px;
+    margin-bottom: -9px;
+  }
+  .section_Home .home .desc .Description .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .title3 {
+    font-size: 32px;
+    margin-bottom: -18px;
+  }
+  .section_Home .home .desc .Description .title3 {
+    margin-bottom: -14px;
+  }
+  .section_Home .home .cover {
+    width: 50%;
+  }
+  .section_Home .home .cover .img {
+    width: 100%;
+    height: 53%;
+  }
+}
+@media screen and (min-width: 1039px) and (max-width: 1200px) {
+  .section_Home .home .desc .Description {
+    margin-left: 16px;
+    margin-top: 290px;
+  }
+  .section_Home .home .desc .Description .title1, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title3, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .link .leareMore, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .link .leareMore, .New .new .section1 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .section_Home .home .desc .Description .leareMore, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title2, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title2, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3 {
+    font-size: 22px;
+    margin-bottom: -9px;
+  }
+  .section_Home .home .desc .Description .title2, .section_Home .home .desc .Description .New .new .section1 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section6 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section5 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section4 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section3 .crazydealy .Text .title3, .section_Home .home .desc .Description .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .section_Home .home .desc .Description .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .section_Home .home .desc .Description .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .title3 {
+    font-size: 32px;
+    margin-bottom: -18px;
+  }
+  .section_Home .home .desc .Description .title3 {
+    margin-bottom: -14px;
+  }
+  .section_Home .home .cover {
+    width: 50%;
+    margin-top: 71px;
+  }
+  .section_Home .home .cover .img {
+    width: 100%;
+    height: 88%;
+  }
+}
+.section_nav {
+  width: 100%;
+  height: auto;
+  padding-bottom: 91px;
+  margin-top: 36px;
+}
+.section_nav .navList {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.section_nav .navList .nav {
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--clr-primary-1);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.section_nav .navList .nav .image {
+  width: 121px;
+  height: 119px;
+  margin-left: auto;
+  margin-right: auto;
+  background-origin: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section_nav .navList .nav .Title {
+  width: 130px;
+  height: 35px;
+  background: var(--clr-primary-5);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--clr-primary-1);
+}
+.section_nav .navList .nav .Title .title, .section_nav .navList .nav .Title .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .section_nav .navList .nav .Title .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .section_nav .navList .nav .Title .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .section_nav .navList .nav .Title .li_about {
+  font-size: 12px;
+  font-family: var(--font-primary-2);
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--clr-primary-2);
+  padding-top: 8px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1204px) {
+  .section_nav {
+    height: 1225px;
+  }
+  .section_nav .navList {
+    flex-wrap: wrap;
+  }
+}
+.FeatureProduct {
+  width: 100%;
+  height: auto;
+  padding-bottom: 90px;
+  padding-top: 53px;
+}
+.FeatureProduct .Title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.FeatureProduct .Title .title, .FeatureProduct .Title .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FeatureProduct .Title .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .FeatureProduct .Title .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .FeatureProduct .Title .li_about {
+  font-size: 31px;
+  font-family: var(--font-primary-2);
+  font-style: italic;
+  font-weight: bold;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .FeatureProduct .Title .title, .FeatureProduct .Title .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FeatureProduct .Title .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .FeatureProduct .Title .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .FeatureProduct .Title .li_about {
+    font-size: 22px;
+  }
+}
+.FeatureProduct .Title .title2, .FeatureProduct .Title .New .new .section1 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section6 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section5 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section4 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section3 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .FeatureProduct .Title .title3, .FeatureProduct .Title .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .FeatureProduct .Title .title3 {
+  font-size: 31px;
+  font-family: var(--font-primary-2);
+  font-style: italic;
+  font-weight: bold;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 100;
+  color: var(--clr-primary-6);
+}
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .FeatureProduct .Title .title2, .FeatureProduct .Title .New .new .section1 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section6 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section5 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section4 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section3 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .FeatureProduct .Title .title3, .FeatureProduct .Title .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .FeatureProduct .Title .title3 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .FeatureProduct .Title .title2, .FeatureProduct .Title .New .new .section1 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section6 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section5 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section4 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section3 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .FeatureProduct .Title .title3, .FeatureProduct .Title .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .FeatureProduct .Title .title3 {
+    font-size: 12px;
+  }
+}
+.FeatureProduct .PRODUCT {
+  margin-top: 55px;
+  width: 100%;
+  height: auto;
+}
+.FeatureProduct .PRODUCT .link {
+  text-decoration: none;
+}
+.FeatureProduct .PRODUCT .link .pageShop {
+  float: right;
+  margin-right: 49px;
+  border: 1px solid var(--clr-primary-7);
+  padding: 2px 12px;
+  border-radius: 5px;
+}
+.FeatureProduct .PRODUCT .link .pageShop h1 {
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  font-size: 14px;
+  color: var(--clr-primary-2);
+}
+.FeatureProduct .PRODUCT .link .pageShop .right {
+  width: 20px;
+  height: 20px;
+}
+.FeatureProduct .PRODUCT .Product {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.FeatureProduct .PRODUCT .Product .product {
+  width: 22%;
+  height: auto;
+  background: var(--clr-primary-1);
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid var(--clr-primary-6);
+  display: flex;
+  flex-wrap: nowrap;
+}
+.FeatureProduct .PRODUCT .Product .product .image {
+  width: 45%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 5px;
+}
+.FeatureProduct .PRODUCT .Product .product .image img {
+  width: 97%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.FeatureProduct .PRODUCT .Product .product .description {
+  margin: 20px 0 20px 20px;
+}
+.FeatureProduct .PRODUCT .Product .product .description .category {
+  font-size: 13px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-6);
+  text-transform: capitalize;
+}
+.FeatureProduct .PRODUCT .Product .product .description .widthtitle {
+  width: 99.5%;
+  height: 70px;
+  margin-top: 10px;
+  margin-bottom: -25px;
+}
+.FeatureProduct .PRODUCT .Product .product .description .widthtitle .title, .FeatureProduct .PRODUCT .Product .product .description .widthtitle .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FeatureProduct .PRODUCT .Product .product .description .widthtitle .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .FeatureProduct .PRODUCT .Product .product .description .widthtitle .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .FeatureProduct .PRODUCT .Product .product .description .widthtitle .li_about {
+  font-size: 14px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.FeatureProduct .PRODUCT .Product .product .description .Rate {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.FeatureProduct .PRODUCT .Product .product .description .Rate .rate {
+  font-size: 16px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.FeatureProduct .PRODUCT .Product .product .description .Rate .imgeEtoile {
+  width: 25px;
+  height: 24px;
+}
+.FeatureProduct .PRODUCT .Product .product .description .Price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  padding-right: 10px;
+}
+.FeatureProduct .PRODUCT .Product .product .description .Price .price {
+  font-size: 18px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.FeatureProduct .PRODUCT .Product .product .description .Price .Store {
+  width: 40px;
+  height: 40px;
+  background: var(--clr-primary-5);
+  border-radius: 50%;
+  border: 1px solid var(--clr-primary-7);
+}
+.FeatureProduct .PRODUCT .Product .product .description .Price .Store .link {
+  text-decoration: none;
+}
+.FeatureProduct .PRODUCT .Product .product .description .Price .Store .link .store_icon {
+  width: 29px;
+  height: 29px;
+  color: var(--clr-primary-7);
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 4px;
+}
+.FeatureProduct .PRODUCT .Product .product .description .Price .Store .link:active {
+  transform: scale(0.98);
+}
+
+@media screen and (min-width: 320px) and (max-width: 572px) {
+  .FeatureProduct .Title .title, .FeatureProduct .Title .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FeatureProduct .Title .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .FeatureProduct .Title .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .FeatureProduct .Title .li_about {
+    font-size: 31px;
+    font-family: var(--font-primary-2);
+    font-style: italic;
+    font-weight: bold;
+    color: var(--clr-primary-2);
+    text-transform: capitalize;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 572px) and (min-width: 320px) and (max-width: 720px) {
+  .FeatureProduct .Title .title, .FeatureProduct .Title .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FeatureProduct .Title .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .FeatureProduct .Title .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .FeatureProduct .Title .li_about {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 572px) {
+  .FeatureProduct .Title .title2, .FeatureProduct .Title .New .new .section1 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section6 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section5 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section4 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section3 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .FeatureProduct .Title .title3, .FeatureProduct .Title .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .FeatureProduct .Title .title3 {
+    font-size: 31px;
+    font-family: var(--font-primary-2);
+    font-style: italic;
+    font-weight: bold;
+    color: var(--clr-primary-2);
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 100;
+    color: var(--clr-primary-6);
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 572px) and (min-width: 320px) and (max-width: 720px) {
+  .FeatureProduct .Title .title2, .FeatureProduct .Title .New .new .section1 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section6 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section5 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section4 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section3 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .FeatureProduct .Title .title3, .FeatureProduct .Title .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .FeatureProduct .Title .title3 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 572px) and (min-width: 320px) and (max-width: 720px) {
+  .FeatureProduct .Title .title2, .FeatureProduct .Title .New .new .section1 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section6 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section5 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section4 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section3 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .FeatureProduct .Title .title3, .FeatureProduct .Title .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .FeatureProduct .Title .title3 {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 572px) {
+  .FeatureProduct .PRODUCT .Product {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .FeatureProduct .PRODUCT .Product .product {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 573px) and (max-width: 1030px) {
+  .FeatureProduct .Title .title, .FeatureProduct .Title .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FeatureProduct .Title .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .FeatureProduct .Title .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .FeatureProduct .Title .li_about {
+    font-size: 31px;
+    font-family: var(--font-primary-2);
+    font-style: italic;
+    font-weight: bold;
+    color: var(--clr-primary-2);
+    text-transform: capitalize;
+  }
+}
+@media screen and (min-width: 573px) and (max-width: 1030px) and (min-width: 320px) and (max-width: 720px) {
+  .FeatureProduct .Title .title, .FeatureProduct .Title .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FeatureProduct .Title .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .FeatureProduct .Title .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .FeatureProduct .Title .li_about {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 573px) and (max-width: 1030px) {
+  .FeatureProduct .Title .title2, .FeatureProduct .Title .New .new .section1 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section6 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section5 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section4 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section3 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .FeatureProduct .Title .title3, .FeatureProduct .Title .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .FeatureProduct .Title .title3 {
+    font-size: 31px;
+    font-family: var(--font-primary-2);
+    font-style: italic;
+    font-weight: bold;
+    color: var(--clr-primary-2);
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 100;
+    color: var(--clr-primary-6);
+  }
+}
+@media screen and (min-width: 573px) and (max-width: 1030px) and (min-width: 320px) and (max-width: 720px) {
+  .FeatureProduct .Title .title2, .FeatureProduct .Title .New .new .section1 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section6 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section5 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section4 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section3 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .FeatureProduct .Title .title3, .FeatureProduct .Title .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .FeatureProduct .Title .title3 {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 573px) and (max-width: 1030px) and (min-width: 320px) and (max-width: 720px) {
+  .FeatureProduct .Title .title2, .FeatureProduct .Title .New .new .section1 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section6 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section5 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section4 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section3 .crazydealy .Text .title3, .FeatureProduct .Title .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .FeatureProduct .Title .New .new .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .FeatureProduct .Title .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .FeatureProduct .Title .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .FeatureProduct .Title .title3, .FeatureProduct .Title .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .FeatureProduct .Title .title3 {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 573px) and (max-width: 1030px) {
+  .FeatureProduct .PRODUCT .Product {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: none;
+  }
+  .FeatureProduct .PRODUCT .Product .product {
+    width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.New {
+  width: 100%;
+  height: auto;
+}
+.New .new .section1, .New .new .MyProduct .myproduct .section6, .MyProduct .myproduct .New .new .section6, .New .new .MyProduct .myproduct .section5, .MyProduct .myproduct .New .new .section5, .New .new .MyProduct .myproduct .section4, .MyProduct .myproduct .New .new .section4, .New .new .MyProduct .myproduct .section3, .MyProduct .myproduct .New .new .section3, .New .new .MyProduct .myproduct .section2, .MyProduct .myproduct .New .new .section2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+.New .new .section1 .crazydealy, .New .new .MyProduct .myproduct .section6 .crazydealy, .MyProduct .myproduct .New .new .section6 .crazydealy, .New .new .MyProduct .myproduct .section5 .crazydealy, .MyProduct .myproduct .New .new .section5 .crazydealy, .New .new .MyProduct .myproduct .section4 .crazydealy, .MyProduct .myproduct .New .new .section4 .crazydealy, .New .new .MyProduct .myproduct .section3 .crazydealy, .MyProduct .myproduct .New .new .section3 .crazydealy, .New .new .MyProduct .myproduct .section2 .crazydealy, .MyProduct .myproduct .New .new .section2 .crazydealy {
+  width: 30%;
+  height: 393px;
+  border-radius: 5px;
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+.New .new .section1 .crazydealy .Text, .New .new .MyProduct .myproduct .section6 .crazydealy .Text, .MyProduct .myproduct .New .new .section6 .crazydealy .Text, .New .new .MyProduct .myproduct .section5 .crazydealy .Text, .MyProduct .myproduct .New .new .section5 .crazydealy .Text, .New .new .MyProduct .myproduct .section4 .crazydealy .Text, .MyProduct .myproduct .New .new .section4 .crazydealy .Text, .New .new .MyProduct .myproduct .section3 .crazydealy .Text, .MyProduct .myproduct .New .new .section3 .crazydealy .Text, .New .new .MyProduct .myproduct .section2 .crazydealy .Text, .MyProduct .myproduct .New .new .section2 .crazydealy .Text {
+  margin-left: 10px;
+  margin-top: 23%;
+}
+.New .new .section1 .crazydealy .Text .title1, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title1, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .title1, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title1, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .title1, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title1, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .title1, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title1, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .title1, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title1, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .title1, .New .new .section1 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .leareMore, .New .new .section1 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .title2, .New .new .section1 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .title3 {
+  font-family: var(--font-primary-3);
+  font-size: 30px;
+  color: var(--clr-primary-3);
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.New .new .section1 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .title2, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title2, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .title2, .New .new .section1 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .title3 {
+  font-family: var(--font-primary-1);
+}
+.New .new .section1 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .title3 {
+  font-size: 12.5px;
+  color: var(--clr-primary-6);
+}
+.New .new .section1 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .leareMore {
+  width: 21%;
+  height: 42px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--clr-primary-1);
+  background-color: transparent;
+  font-size: 17.5px;
+  cursor: pointer;
+}
+.New .new .section1 .crazydealy .Text .link .leareMore:active, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore:active, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .leareMore:active, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore:active, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .leareMore:active, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore:active, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .leareMore:active, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore:active, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .leareMore:active, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore:active, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .leareMore:active {
+  transform: scale(0.98);
+}
+.New .new .section2 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 30px;
+  margin-top: 20px;
+}
+.New .new .section2 .winterCollection {
+  width: 21%;
+  height: 240px;
+  border-radius: 5px;
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+.New .new .section2 .winterCollection .Text {
+  margin-left: 10px;
+  margin-top: 23%;
+}
+.New .new .section2 .winterCollection .Text .title1, .New .new .section2 .winterCollection .Text .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title3, .New .new .section2 .winterCollection .section1 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section6 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section5 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section4 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section3 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .section2 .winterCollection .Text .title3, .New .new .section2 .winterCollection .section1 .crazydealy .Text .link .leareMore, .New .new .section2 .winterCollection .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .winterCollection .section6 .crazydealy .Text .link .leareMore, .New .new .section2 .winterCollection .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .winterCollection .section5 .crazydealy .Text .link .leareMore, .New .new .section2 .winterCollection .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .winterCollection .section4 .crazydealy .Text .link .leareMore, .New .new .section2 .winterCollection .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .winterCollection .section3 .crazydealy .Text .link .leareMore, .New .new .section2 .winterCollection .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .winterCollection .section2 .crazydealy .Text .link .leareMore, .New .new .section1 .crazydealy .section2 .winterCollection .Text .link .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .section2 .winterCollection .Text .link .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .section2 .winterCollection .Text .link .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .section2 .winterCollection .Text .link .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .section2 .winterCollection .Text .link .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .section2 .winterCollection .Text .link .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .section2 .winterCollection .Text .link .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .section2 .winterCollection .Text .link .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .section2 .winterCollection .Text .link .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .section2 .winterCollection .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .section2 .winterCollection .Text .link .leareMore {
+  font-family: var(--font-primary-3);
+  font-size: 30px;
+  color: var(--clr-primary-3);
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.New .new .section2 .winterCollection .Text .title2, .New .new .section2 .winterCollection .Text .section_Home .home .desc .Description .title3, .section_Home .home .desc .Description .New .new .section2 .winterCollection .Text .title3, .New .new .section2 .winterCollection .section1 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section6 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section6 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section5 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section5 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section4 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section4 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section3 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section3 .crazydealy .Text .title3, .New .new .section2 .winterCollection .MyProduct .myproduct .section2 .crazydealy .Text .title3, .MyProduct .myproduct .New .new .section2 .winterCollection .section2 .crazydealy .Text .title3, .New .new .section1 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section6 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section6 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section5 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section5 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section4 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section4 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section3 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section3 .crazydealy .section2 .winterCollection .Text .title3, .New .new .MyProduct .myproduct .section2 .crazydealy .section2 .winterCollection .Text .title3, .MyProduct .myproduct .New .new .section2 .crazydealy .section2 .winterCollection .Text .title3 {
+  font-family: var(--font-primary-1);
+  font-size: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 580px) {
+  .New .new .section1, .New .new .MyProduct .myproduct .section6, .MyProduct .myproduct .New .new .section6, .New .new .MyProduct .myproduct .section5, .MyProduct .myproduct .New .new .section5, .New .new .MyProduct .myproduct .section4, .MyProduct .myproduct .New .new .section4, .New .new .MyProduct .myproduct .section3, .MyProduct .myproduct .New .new .section3, .New .new .MyProduct .myproduct .section2, .MyProduct .myproduct .New .new .section2 {
+    flex-wrap: wrap;
+  }
+  .New .new .section1 .crazydealy, .New .new .MyProduct .myproduct .section6 .crazydealy, .MyProduct .myproduct .New .new .section6 .crazydealy, .New .new .MyProduct .myproduct .section5 .crazydealy, .MyProduct .myproduct .New .new .section5 .crazydealy, .New .new .MyProduct .myproduct .section4 .crazydealy, .MyProduct .myproduct .New .new .section4 .crazydealy, .New .new .MyProduct .myproduct .section3 .crazydealy, .MyProduct .myproduct .New .new .section3 .crazydealy, .New .new .MyProduct .myproduct .section2 .crazydealy, .MyProduct .myproduct .New .new .section2 .crazydealy {
+    width: 94%;
+    margin-bottom: 20px;
+  }
+  .New .new .section1 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .leareMore {
+    width: 38%;
+  }
+  .New .new .section2 {
+    flex-wrap: wrap;
+  }
+  .New .new .section2 .winterCollection {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 581px) and (max-width: 720px) {
+  .New .new .section1 .crazydealy, .New .new .MyProduct .myproduct .section6 .crazydealy, .MyProduct .myproduct .New .new .section6 .crazydealy, .New .new .MyProduct .myproduct .section5 .crazydealy, .MyProduct .myproduct .New .new .section5 .crazydealy, .New .new .MyProduct .myproduct .section4 .crazydealy, .MyProduct .myproduct .New .new .section4 .crazydealy, .New .new .MyProduct .myproduct .section3 .crazydealy, .MyProduct .myproduct .New .new .section3 .crazydealy, .New .new .MyProduct .myproduct .section2 .crazydealy, .MyProduct .myproduct .New .new .section2 .crazydealy {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .New .new .section1 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .leareMore {
+    width: 38%;
+  }
+  .New .new .section2 {
+    flex-wrap: wrap;
+  }
+  .New .new .section2 .winterCollection {
+    width: 95%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1020px) {
+  .New .new .section1 .crazydealy, .New .new .MyProduct .myproduct .section6 .crazydealy, .MyProduct .myproduct .New .new .section6 .crazydealy, .New .new .MyProduct .myproduct .section5 .crazydealy, .MyProduct .myproduct .New .new .section5 .crazydealy, .New .new .MyProduct .myproduct .section4 .crazydealy, .MyProduct .myproduct .New .new .section4 .crazydealy, .New .new .MyProduct .myproduct .section3 .crazydealy, .MyProduct .myproduct .New .new .section3 .crazydealy, .New .new .MyProduct .myproduct .section2 .crazydealy, .MyProduct .myproduct .New .new .section2 .crazydealy {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .New .new .section1 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .leareMore {
+    width: 47%;
+  }
+  .New .new .section2 {
+    flex-wrap: wrap;
+  }
+  .New .new .section2 .winterCollection {
+    width: 41%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1026px) and (max-width: 1664px) {
+  .New .new .section1 .crazydealy, .New .new .MyProduct .myproduct .section6 .crazydealy, .MyProduct .myproduct .New .new .section6 .crazydealy, .New .new .MyProduct .myproduct .section5 .crazydealy, .MyProduct .myproduct .New .new .section5 .crazydealy, .New .new .MyProduct .myproduct .section4 .crazydealy, .MyProduct .myproduct .New .new .section4 .crazydealy, .New .new .MyProduct .myproduct .section3 .crazydealy, .MyProduct .myproduct .New .new .section3 .crazydealy, .New .new .MyProduct .myproduct .section2 .crazydealy, .MyProduct .myproduct .New .new .section2 .crazydealy {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .New .new .section1 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section6 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section6 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section5 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section5 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section4 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section4 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section3 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section3 .crazydealy .Text .link .leareMore, .New .new .MyProduct .myproduct .section2 .crazydealy .Text .link .leareMore, .MyProduct .myproduct .New .new .section2 .crazydealy .Text .link .leareMore {
+    width: 47%;
+  }
+  .New .new .section2 {
+    flex-wrap: wrap;
+  }
+  .New .new .section2 .winterCollection {
+    width: 29%;
+    margin-bottom: 20px;
+  }
+}
+.StayHome {
+  width: 100%;
+  height: auto;
+  padding-top: 152px;
+}
+.StayHome .stayHome {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  padding-bottom: 31px;
+}
+.StayHome .stayHome .title, .StayHome .stayHome .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .StayHome .stayHome .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .StayHome .stayHome .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .StayHome .stayHome .li_about {
+  text-align: center;
+  padding-top: 10px;
+}
+.StayHome .stayHome .title .stayHomeTitle, .StayHome .stayHome .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about .stayHomeTitle, .StayHome .stayHome .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about .stayHomeTitle, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .StayHome .stayHome .li_about .stayHomeTitle, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .StayHome .stayHome .li_about .stayHomeTitle {
+  font-size: 45px;
+  font-family: var(--font-primary-3);
+  font-weight: bold;
+  font-style: normal;
+  color: var(--clr-primary-3);
+}
+.StayHome .stayHome .title .stayHomeTitle2, .StayHome .stayHome .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about .stayHomeTitle2, .StayHome .stayHome .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about .stayHomeTitle2, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .StayHome .stayHome .li_about .stayHomeTitle2, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .StayHome .stayHome .li_about .stayHomeTitle2 {
+  font-size: 14px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-1);
+}
+
+@media screen and (min-width: 320px) and (max-width: 746px) {
+  .StayHome .stayHome .title .stayHomeTitle, .StayHome .stayHome .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about .stayHomeTitle, .StayHome .stayHome .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about .stayHomeTitle, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .StayHome .stayHome .li_about .stayHomeTitle, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .StayHome .stayHome .li_about .stayHomeTitle {
+    font-size: 27px;
+  }
+  .StayHome .stayHome .title .stayHomeTitle2, .StayHome .stayHome .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about .stayHomeTitle2, .StayHome .stayHome .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about .stayHomeTitle2, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .StayHome .stayHome .li_about .stayHomeTitle2, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .StayHome .stayHome .li_about .stayHomeTitle2 {
+    font-size: 11px;
+  }
+}
+.Product {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+.Product .product {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.Product .product .pro {
+  width: 22%;
+  height: auto;
+  background: var(--clr-primary-1);
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid var(--clr-primary-6);
+  display: flex;
+  flex-wrap: nowrap;
+}
+.Product .product .pro .image {
+  width: 45%;
+  height: auto;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.Product .product .pro .image img {
+  width: 97%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.Product .product .pro .description {
+  margin: 20px 0 20px 20px;
+}
+.Product .product .pro .description .category {
+  font-size: 13px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-6);
+  text-transform: capitalize;
+}
+.Product .product .pro .description .widthtitle {
+  width: 99.5%;
+  height: 70px;
+  margin-top: 10px;
+  margin-bottom: -25px;
+}
+.Product .product .pro .description .widthtitle .title, .Product .product .pro .description .widthtitle .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .Product .product .pro .description .widthtitle .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .Product .product .pro .description .widthtitle .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .Product .product .pro .description .widthtitle .li_about {
+  font-size: 14px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.Product .product .pro .description .Rate {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.Product .product .pro .description .Rate .rate {
+  font-size: 16px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.Product .product .pro .description .Rate .imgeEtoile {
+  width: 25px;
+  height: 24px;
+}
+.Product .product .pro .description .Price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  padding-right: 10px;
+}
+.Product .product .pro .description .Price .price {
+  font-size: 18px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.Product .product .pro .description .Price .Store {
+  width: 40px;
+  height: 40px;
+  background: var(--clr-primary-5);
+  border-radius: 50%;
+  border: 1px solid var(--clr-primary-7);
+}
+.Product .product .pro .description .Price .Store .link {
+  text-decoration: none;
+}
+.Product .product .pro .description .Price .Store .link .store_icon {
+  width: 29px;
+  height: 29px;
+  color: var(--clr-primary-7);
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 4px;
+}
+.Product .product .pro .description .Price .Store .link:active {
+  transform: scale(0.98);
+}
+
+@media screen and (min-width: 320px) and (max-width: 572px) {
+  .Product .product {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .Product .product .pro {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 573px) and (max-width: 1030px) {
+  .Product .product .pro {
+    width: 49%;
+  }
+}
+.NavBlogs {
+  width: 100%;
+  height: auto;
+  padding-top: 152px;
+}
+.NavBlogs .navBlogs {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  padding-bottom: 31px;
+}
+.NavBlogs .navBlogs .title, .NavBlogs .navBlogs .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .NavBlogs .navBlogs .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .NavBlogs .navBlogs .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .NavBlogs .navBlogs .li_about {
+  text-align: center;
+  padding-top: 10px;
+}
+.NavBlogs .navBlogs .title .navBlogsTitle, .NavBlogs .navBlogs .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about .navBlogsTitle, .NavBlogs .navBlogs .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about .navBlogsTitle, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .NavBlogs .navBlogs .li_about .navBlogsTitle, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .NavBlogs .navBlogs .li_about .navBlogsTitle {
+  font-size: 45px;
+  font-family: var(--font-primary-3);
+  font-weight: bold;
+  font-style: normal;
+  color: var(--clr-primary-3);
+}
+.NavBlogs .navBlogs .title .navBlogsTitle2, .NavBlogs .navBlogs .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about .navBlogsTitle2, .NavBlogs .navBlogs .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about .navBlogsTitle2, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .NavBlogs .navBlogs .li_about .navBlogsTitle2, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .NavBlogs .navBlogs .li_about .navBlogsTitle2 {
+  font-size: 14px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-1);
+}
+
+@media screen and (min-width: 320px) and (max-width: 746px) {
+  .NavBlogs .stayHome .title .stayHomeTitle, .NavBlogs .stayHome .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about .stayHomeTitle, .NavBlogs .stayHome .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about .stayHomeTitle, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .NavBlogs .stayHome .li_about .stayHomeTitle, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .NavBlogs .stayHome .li_about .stayHomeTitle {
+    font-size: 27px;
+  }
+  .NavBlogs .stayHome .title .stayHomeTitle2, .NavBlogs .stayHome .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about .stayHomeTitle2, .NavBlogs .stayHome .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about .stayHomeTitle2, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .NavBlogs .stayHome .li_about .stayHomeTitle2, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .NavBlogs .stayHome .li_about .stayHomeTitle2 {
+    font-size: 11px;
+  }
+}
+.SectionBlog {
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+}
+.SectionBlog .sectionBlog1 {
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.SectionBlog .sectionBlog1 .section_blog {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid var(--clr-primary-2);
+}
+.SectionBlog .sectionBlog1 .section_blog .Date {
+  width: 44%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px dashed var(--clr-primary-6);
+}
+.SectionBlog .sectionBlog1 .section_blog .Date .date {
+  font-size: 75px;
+  font-family: var(--font-primary-3);
+  color: var(--clr-primary-1);
+  text-align: center;
+}
+.SectionBlog .sectionBlog1 .section_blog .Date .imgCover {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  margin-top: -13px;
+}
+.SectionBlog .sectionBlog1 .description {
+  margin-top: 77px;
+  margin-left: 20px;
+}
+.SectionBlog .sectionBlog1 .description .title, .SectionBlog .sectionBlog1 .description .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .SectionBlog .sectionBlog1 .description .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .SectionBlog .sectionBlog1 .description .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .SectionBlog .sectionBlog1 .description .li_about {
+  font-size: 21px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+.SectionBlog .sectionBlog1 .description .parag {
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  font-style: italic;
+  color: var(--clr-primary-1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 52%;
+}
+.SectionBlog .sectionBlog1 .description .continueLoading {
+  color: var(--clr-primary-2);
+  margin-left: 10px;
+  font-size: 12px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.SectionBlog .sectionBlog1 .description .continueLoading::after {
+  content: "";
+  position: absolute;
+  width: 3%;
+  height: 3px;
+  background: var(--clr-primary-2);
+  margin-top: 9px;
+  border-radius: 5px;
+  margin-left: 10px;
+  z-index: -1;
+}
+
+@media screen and (min-width: 320px) and (max-width: 660px) {
+  .SectionBlog .sectionBlog1 {
+    width: 97%;
+  }
+  .SectionBlog .sectionBlog1 .section_blog {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .SectionBlog .sectionBlog1 .section_blog .Date {
+    width: 100%;
+  }
+  .SectionBlog .sectionBlog1 .description {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+  .SectionBlog .sectionBlog1 .description .title, .SectionBlog .sectionBlog1 .description .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .SectionBlog .sectionBlog1 .description .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .SectionBlog .sectionBlog1 .description .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .SectionBlog .sectionBlog1 .description .li_about {
+    font-size: 17px;
+    text-align: center;
+  }
+  .SectionBlog .sectionBlog1 .description .parag {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+  .SectionBlog .sectionBlog1 .description .continueLoading {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .SectionBlog .sectionBlog1 .description .continueLoading::after {
+    display: none;
+  }
+}
+@media screen and (min-width: 661px) and (max-width: 1020px) {
+  .SectionBlog .sectionBlog1 {
+    width: 97%;
+  }
+  .SectionBlog .sectionBlog1 .section_blog {
+    width: 100%;
+  }
+  .SectionBlog .sectionBlog1 .section_blog .Date {
+    width: 238%;
+  }
+  .SectionBlog .sectionBlog1 .description .title, .SectionBlog .sectionBlog1 .description .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .SectionBlog .sectionBlog1 .description .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .SectionBlog .sectionBlog1 .description .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .SectionBlog .sectionBlog1 .description .li_about {
+    font-size: 17px;
+  }
+  .SectionBlog .sectionBlog1 .description .parag {
+    width: 100%;
+  }
+}
+.identification {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  padding-top: 20px;
+}
+.identification .identy {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.identification .identy .image {
+  width: 27%;
+  border: 1px solid var(--clr-primary-2);
+  border-radius: 5px;
+  height: auto;
+  background-origin: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.identification .identy .parg {
+  width: 45%;
+  height: 500px;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+.identification .identy .parg .Title {
+  margin-bottom: 10px;
+}
+.identification .identy .parg .Title .title, .identification .identy .parg .Title .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .identification .identy .parg .Title .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .identification .identy .parg .Title .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .identification .identy .parg .Title .li_about {
+  font-size: 31px;
+  font-family: var(--font-primary-4);
+  font-weight: bold;
+  color: var(--clr-primary-2);
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+.identification .identy .parg .Desc {
+  width: 90%;
+  margin-bottom: 10px;
+}
+.identification .identy .parg .Desc .desc {
+  font-size: 13px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-6);
+  text-transform: capitalize;
+}
+.identification .identy .parg .Parg2 {
+  width: 81%;
+  margin-bottom: 10px;
+}
+.identification .identy .parg .Parg2 .parg2 {
+  font-size: 13px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.identification .identy .parg .Marquee {
+  width: 81%;
+}
+.identification .identy .parg .Marquee .marquee {
+  background: var(--clr-primary-1);
+  border-radius: 2px;
+  z-index: -1;
+}
+.identification .identy .parg .Marquee .marquee span {
+  font-size: 12px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 320px) and (max-width: 890px) {
+  .identification {
+    padding-bottom: 0;
+  }
+  .identification .identy {
+    flex-wrap: wrap;
+  }
+  .identification .identy .image {
+    width: 55%;
+    height: 300px;
+  }
+  .identification .identy .parg {
+    width: 100%;
+  }
+  .identification .identy .parg .Title {
+    text-align: center;
+  }
+  .identification .identy .parg .Desc {
+    width: 99%;
+  }
+  .identification .identy .parg .Desc .desc {
+    font-size: 12px;
+  }
+  .identification .identy .parg .Parg2 {
+    width: 99%;
+    margin-bottom: 10px;
+  }
+  .identification .identy .parg .Parg2 .parg2 {
+    font-size: 10px;
+  }
+  .identification .identy .parg .Marquee {
+    width: 99%;
+  }
+}
+.Location {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.Location .location {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.Location .location iframe {
+  width: 48%;
+  height: 460px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .Location .location iframe {
+    width: 48%;
+    height: 200px;
+  }
+}
+.Form {
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+  margin-top: 100px;
+}
+.Form #form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.Form #form .form {
+  width: 50%;
+  height: auto;
+  padding-bottom: 20px;
+}
+.Form #form .form .text {
+  font-size: 16px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-6);
+  text-transform: uppercase;
+}
+.Form #form .form .text2 {
+  font-size: 30px;
+  font-family: var(--font-primary-4);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.Form #form .form .inputs {
+  width: 84%;
+  height: auto;
+}
+.Form #form .form .inputs .input, .Form #form .form .inputs .textarea {
+  width: 100%;
+  height: 55px;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: 1px solid var(--clr-primary-2);
+  padding-left: 10px;
+  background: transparent;
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+}
+.Form #form .form .inputs .input::-moz-placeholder, .Form #form .form .inputs .textarea::-moz-placeholder {
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  padding-left: 10px;
+}
+.Form #form .form .inputs .input::placeholder, .Form #form .form .inputs .textarea::placeholder {
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  padding-left: 10px;
+}
+.Form #form .form .inputs .input:focus, .Form #form .form .inputs .textarea:focus {
+  outline: none;
+}
+.Form #form .form .inputs .textarea {
+  height: 126px;
+}
+.Form #form .form .inputs .submit {
+  width: 100px;
+  height: 41px;
+  background: var(--clr-primary-5);
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  font-style: italic;
+  color: var(--clr-primary-2);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.Form #form .form .inputs .submit:active {
+  transform: scale(0.98);
+}
+.Form #form .form .inputs .submit:hover {
+  background: var(--clr-primary-7);
+}
+.Form #form .rateclient {
+  width: 36%;
+  margin-top: 40px;
+}
+.Form #form .rateclient .clients {
+  width: 100%;
+  height: auto;
+}
+.Form #form .rateclient .clients .client {
+  width: 56%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.Form #form .rateclient .clients .client .img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+.Form #form .rateclient .clients .client .detail .name {
+  font-size: 18px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.Form #form .rateclient .clients .client .detail .occupation, .Form #form .rateclient .clients .client .detail .phone, .Form #form .rateclient .clients .client .detail .email {
+  font-size: 14px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.Form #form .rateclient .clients .client .detail .phone, .Form #form .rateclient .clients .client .detail .email {
+  font-size: 15px;
+}
+.Form #form .rateclient .clients .client .detail .phone span, .Form #form .rateclient .clients .client .detail .email span {
+  font-size: 14px;
+  font-weight: 100;
+  color: var(--clr-primary-6);
+}
+.Form #form .rateclient .clients .client .detail .email {
+  text-transform: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .Form #form {
+    flex-wrap: wrap;
+  }
+  .Form #form .form {
+    width: 100%;
+    margin-left: 10px;
+  }
+  .Form #form .form .text {
+    font-size: 13px;
+  }
+  .Form #form .form .text2 {
+    font-size: 20px;
+  }
+  .Form #form .form .inputs {
+    width: 94%;
+  }
+  .Form #form .rateclient {
+    width: 100%;
+  }
+  .Form #form .rateclient .clients .client {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 721px) and (max-width: 1200px) {
+  .Form #form .rateclient .clients {
+    width: 100%;
+  }
+  .Form #form .rateclient .clients .client {
+    width: 100%;
+  }
+}
+.FormProfile {
+  width: 100%;
+  height: 400px;
+  padding-top: 50px;
+}
+.FormProfile .form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.FormProfile .form #form .Inputs {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  border: 1px solid var(--clr-primary-2);
+  border-radius: 3px;
+}
+.FormProfile .form #form .Inputs .logo, .FormProfile .form #form .Inputs .NavSearch .navbar_search .Search .search_input, .NavSearch .navbar_search .Search .FormProfile .form #form .Inputs .search_input {
+  font-family: var(--font-logo);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 35px;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.FormProfile .form #form .Inputs .connect {
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.FormProfile .form #form .Inputs .inputs {
+  width: 100%;
+  height: 55px;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: 1px solid var(--clr-primary-2);
+  padding-left: 10px;
+  background: transparent;
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  width: 86%;
+}
+.FormProfile .form #form .Inputs .inputs::-moz-placeholder {
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  padding-left: 10px;
+}
+.FormProfile .form #form .Inputs .inputs::placeholder {
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  padding-left: 10px;
+}
+.FormProfile .form #form .Inputs .inputs:focus {
+  outline: none;
+}
+.FormProfile .form #form .Inputs .submit {
+  width: 100px;
+  height: 41px;
+  background: var(--clr-primary-5);
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  font-style: italic;
+  color: var(--clr-primary-2);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.FormProfile .form #form .Inputs .submit:active {
+  transform: scale(0.98);
+}
+.FormProfile .form #form .Inputs .submit:hover {
+  background: var(--clr-primary-7);
+}
+
+.MyProduct {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  padding-top: 20px;
+}
+.MyProduct .myproduct {
+  width: 92%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.MyProduct .myproduct .section1, .MyProduct .myproduct .section6, .MyProduct .myproduct .section5, .MyProduct .myproduct .section4, .MyProduct .myproduct .section3, .MyProduct .myproduct .section2 {
+  width: 20%;
+  height: 108px;
+}
+.MyProduct .myproduct .section1 .nav, .MyProduct .myproduct .section6 .nav, .MyProduct .myproduct .section5 .nav, .MyProduct .myproduct .section4 .nav, .MyProduct .myproduct .section3 .nav, .MyProduct .myproduct .section2 .nav {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid var(--clr-primary-2);
+  border-bottom: 1px solid var(--clr-primary-2);
+}
+.MyProduct .myproduct .section1 .nav h1, .MyProduct .myproduct .section6 .nav h1, .MyProduct .myproduct .section5 .nav h1, .MyProduct .myproduct .section4 .nav h1, .MyProduct .myproduct .section3 .nav h1, .MyProduct .myproduct .section2 .nav h1 {
+  font-size: 15px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  color: var(--clr-primary-2);
+  text-transform: uppercase;
+}
+.MyProduct .myproduct .section1 .content, .MyProduct .myproduct .section6 .content, .MyProduct .myproduct .section5 .content, .MyProduct .myproduct .section4 .content, .MyProduct .myproduct .section3 .content, .MyProduct .myproduct .section2 .content {
+  width: 100%;
+  height: 61%;
+  display: flex;
+  justify-content: center;
+  padding-top: 17px;
+  border-bottom: 1px solid var(--clr-primary-2);
+}
+.MyProduct .myproduct .section1 .content .iconClose, .MyProduct .myproduct .section6 .content .iconClose, .MyProduct .myproduct .section5 .content .iconClose, .MyProduct .myproduct .section4 .content .iconClose, .MyProduct .myproduct .section3 .content .iconClose, .MyProduct .myproduct .section2 .content .iconClose {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.MyProduct .myproduct .section1 .content .iconClose:active, .MyProduct .myproduct .section6 .content .iconClose:active, .MyProduct .myproduct .section5 .content .iconClose:active, .MyProduct .myproduct .section4 .content .iconClose:active, .MyProduct .myproduct .section3 .content .iconClose:active, .MyProduct .myproduct .section2 .content .iconClose:active {
+  transform: scale(0.98);
+}
+.MyProduct .myproduct .section2 .content2 {
+  width: 100%;
+  height: 61%;
+  display: flex;
+  justify-content: center;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--clr-primary-2);
+}
+.MyProduct .myproduct .section2 .content2 .Img {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+}
+.MyProduct .myproduct .section3 .content3 {
+  width: 100%;
+  height: 61%;
+  padding-top: 13px;
+  border-bottom: 1px solid var(--clr-primary-2);
+}
+.MyProduct .myproduct .section3 .content3 h1 {
+  font-size: 12px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-6);
+  text-align: center;
+  text-transform: capitalize;
+}
+.MyProduct .myproduct .section4 .content4 {
+  width: 100%;
+  height: 61%;
+  padding-top: 13px;
+  border-bottom: 1px solid var(--clr-primary-2);
+}
+.MyProduct .myproduct .section4 .content4 h1 {
+  font-size: 19px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-2);
+  text-align: center;
+  text-transform: capitalize;
+}
+.MyProduct .myproduct .section5 .content5 {
+  width: 100%;
+  height: 61%;
+  padding-top: 13px;
+  border-bottom: 1px solid var(--clr-primary-2);
+}
+.MyProduct .myproduct .section5 .content5 h1 {
+  font-size: 19px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-2);
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MyProduct .myproduct .section6 .content6 {
+  width: 100%;
+  height: 61%;
+  padding-top: 13px;
+  border-bottom: 1px solid var(--clr-primary-2);
+}
+.MyProduct .myproduct .section6 .content6 h1 {
+  font-size: 19px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-2);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .MyProduct .myproduct .section1 .nav h1, .MyProduct .myproduct .section2 .nav h1, .MyProduct .myproduct .section3 .nav h1, .MyProduct .myproduct .section4 .nav h1, .MyProduct .myproduct .section5 .nav h1, .MyProduct .myproduct .section6 .nav h1 {
+    font-size: 10px;
+  }
+  .MyProduct .myproduct .section1 .content .iconClose, .MyProduct .myproduct .section2 .content .iconClose, .MyProduct .myproduct .section3 .content .iconClose, .MyProduct .myproduct .section4 .content .iconClose, .MyProduct .myproduct .section5 .content .iconClose, .MyProduct .myproduct .section6 .content .iconClose {
+    width: 23px;
+    height: 30px;
+  }
+  .MyProduct .myproduct .section3 .content3 h1 {
+    font-size: 6px;
+  }
+  .MyProduct .myproduct .section4 .content4 h1 {
+    font-size: 12px;
+  }
+  .MyProduct .myproduct .section5 .content5 h1 {
+    font-size: 12px;
+  }
+  .MyProduct .myproduct .section6 .content6 h1 {
+    font-size: 12px;
+  }
+}
+.ProductShow {
+  width: 100%;
+  height: auto;
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
+.ProductShow .sectionProduct {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.ProductShow .sectionProduct .Imgproduct {
+  width: 50%;
+  height: auto;
+  margin-left: 50px;
+}
+.ProductShow .sectionProduct .Imgproduct .image {
+  width: 37%;
+  height: auto;
+  float: right;
+  margin-top: 38px;
+  margin-right: 20px;
+  border-radius: 3px;
+  border: 1px solid var(--clr-primary-2);
+  padding: 20px;
+}
+.ProductShow .sectionProduct .Imgproduct .image img {
+  width: 100%;
+  height: auto;
+}
+.ProductShow .sectionDetail {
+  width: 50%;
+  height: auto;
+}
+.ProductShow .sectionDetail .titleDetail1, .ProductShow .sectionDetail .Detail .detail {
+  font-size: 16px;
+  font-family: var(--font-primary-2);
+  font-weight: 100;
+  color: var(--clr-primary-6);
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.ProductShow .sectionDetail .titleDetail2, .ProductShow .sectionDetail .Detail .titleDetail {
+  font-size: 20px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.ProductShow .sectionDetail .titleDetail3 {
+  font-size: 18px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.ProductShow .sectionDetail .selectSize {
+  margin-top: 10px;
+  background: none;
+  border: 2px solid var(--clr-primary-2);
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: var(--font-primary-2);
+  color: var(--clr-primary-2);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.ProductShow .sectionDetail .selectSize:focus {
+  outline: none;
+}
+.ProductShow .sectionDetail .buttons .number {
+  width: 10%;
+  height: 34px;
+  background: none;
+  border: 2px solid var(--clr-primary-2);
+  border-radius: 2px;
+  text-align: center;
+}
+.ProductShow .sectionDetail .buttons .number:focus {
+  outline: none;
+}
+.ProductShow .sectionDetail .buttons .btn {
+  width: 115px;
+  height: 34px;
+  background: var(--clr-primary-5);
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 14px;
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  font-style: italic;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+  padding-top: 1px;
+}
+.ProductShow .sectionDetail .buttons .btn:hover {
+  transform: scale(0.98);
+}
+.ProductShow .sectionDetail .Detail {
+  margin-top: 30px;
+}
+.ProductShow .sectionDetail .Detail .titleDetail {
+  margin-bottom: 10px;
+}
+.ProductShow .sectionDetail .Detail .detail {
+  font-size: 13px;
+  width: 60%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .ProductShow .sectionProduct {
+    flex-wrap: wrap;
+  }
+  .ProductShow .sectionProduct .Imgproduct {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ProductShow .sectionProduct .Imgproduct .image {
+    width: 100%;
+    float: none;
+  }
+  .ProductShow .sectionDetail {
+    width: 98%;
+    text-align: center;
+  }
+  .ProductShow .sectionDetail .Detail {
+    margin-top: 30px;
+  }
+  .ProductShow .sectionDetail .Detail .detail {
+    text-align: center;
+    width: 100%;
+  }
+}
+.FooterFinal {
+  width: 100%;
+  height: auto;
+  background: var(--clr-primary-1);
+  padding-bottom: 20px;
+  border-top: 1px solid var(--clr-primary-2);
+}
+.FooterFinal .Footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.FooterFinal .Footer .sectionfinal, .FooterFinal .Footer .section2 {
+  margin: 20px;
+  width: 29%;
+  height: auto;
+  padding-bottom: 20px;
+  margin-top: 40px;
+}
+.FooterFinal .Footer .sectionfinal .Logofooter .logofooter, .FooterFinal .Footer .section2 .Logofooter .logofooter {
+  font-family: var(--font-logo);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 35px;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter, .FooterFinal .Footer .section2 .Contactfooter {
+  margin-top: 20px;
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter .contactfooter, .FooterFinal .Footer .section2 .Contactfooter .contactfooter, .FooterFinal .Footer .sectionfinal .Contactfooter .FollowUs .follow_us, .FooterFinal .Footer .section2 .Contactfooter .FollowUs .follow_us {
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  font-size: 22px;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter .contact_me, .FooterFinal .Footer .section2 .Contactfooter .contact_me {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .title, .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .section2 .ABOUT .aboutUs .ul_about .li_about, .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .Contactfooter .contact_me .title, .FooterFinal .Footer .section2 .Contactfooter .contact_me .ABOUT .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .Contactfooter .contact_me .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .Contactfooter .contact_me .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .Contactfooter .contact_me .li_about {
+  font-family: var(--font-primary-2);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .title span, .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .section2 .ABOUT .aboutUs .ul_about .li_about span, .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .section2 .myAccount .aboutUs .ul_about .li_about span, .FooterFinal .Footer .section2 .Contactfooter .contact_me .title span, .FooterFinal .Footer .section2 .Contactfooter .contact_me .ABOUT .aboutUs .ul_about .li_about span, .FooterFinal .Footer .section2 .Contactfooter .contact_me .myAccount .aboutUs .ul_about .li_about span, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .Contactfooter .contact_me .li_about span, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .Contactfooter .contact_me .li_about span {
+  font-family: var(--font-primary-2);
+  font-style: normal;
+  font-weight: 100;
+  font-size: 15px;
+  color: var(--clr-primary-6);
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter .FollowUs .follow_us, .FooterFinal .Footer .section2 .Contactfooter .FollowUs .follow_us {
+  margin-top: 20px;
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter .FollowUs .Icons, .FooterFinal .Footer .section2 .Contactfooter .FollowUs .Icons {
+  display: flex;
+  margin-top: 12px;
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter .FollowUs .Icons .icon, .FooterFinal .Footer .section2 .Contactfooter .FollowUs .Icons .icon {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background: var(--clr-primary-6);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--clr-primary-3);
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter .FollowUs .Icons .icon ion-icon, .FooterFinal .Footer .section2 .Contactfooter .FollowUs .Icons .icon ion-icon {
+  margin: 5px;
+}
+.FooterFinal .Footer .sectionfinal .Contactfooter .FollowUs .Icons .icon:hover, .FooterFinal .Footer .section2 .Contactfooter .FollowUs .Icons .icon:hover {
+  background: var(--clr-primary-3);
+  color: var(--clr-primary-2);
+}
+.FooterFinal .Footer .section2 {
+  width: 43%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 97px;
+  margin-bottom: 20px;
+}
+.FooterFinal .Footer .section2 .ABOUT .title, .FooterFinal .Footer .section2 .myAccount .title, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about {
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  font-size: 22px;
+  color: var(--clr-primary-2);
+  text-transform: capitalize;
+}
+.FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about {
+  margin-top: 10px;
+}
+.FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--clr-primary-6);
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about:hover, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about:hover {
+  color: var(--clr-primary-2);
+}
+.FooterFinal .final hr {
+  width: 37%;
+  border: 1px solid var(--clr-primary-2);
+  margin-left: auto;
+  margin-right: auto;
+}
+.FooterFinal .final .createdBy {
+  font-family: var(--font-primary-2);
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--clr-primary-2);
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .FooterFinal .Footer {
+    flex-wrap: wrap;
+  }
+  .FooterFinal .Footer .sectionfinal, .FooterFinal .Footer .section2 {
+    width: 89%;
+    height: auto;
+  }
+  .FooterFinal .Footer .sectionfinal .Contactfooter .contactfooter, .FooterFinal .Footer .section2 .Contactfooter .contactfooter, .FooterFinal .Footer .sectionfinal .Contactfooter .FollowUs .follow_us, .FooterFinal .Footer .section2 .Contactfooter .FollowUs .follow_us {
+    font-size: 17px;
+  }
+  .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .title, .FooterFinal .Footer .section2 .Contactfooter .contact_me .title, .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .section2 .ABOUT .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .Contactfooter .contact_me .ABOUT .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .Contactfooter .contact_me .li_about, .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .section2 .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .Contactfooter .contact_me .myAccount .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .Contactfooter .contact_me .li_about {
+    font-size: 13px;
+  }
+  .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .title span, .FooterFinal .Footer .section2 .Contactfooter .contact_me .title span, .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .section2 .ABOUT .aboutUs .ul_about .li_about span, .FooterFinal .Footer .section2 .Contactfooter .contact_me .ABOUT .aboutUs .ul_about .li_about span, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .Contactfooter .contact_me .li_about span, .FooterFinal .Footer .sectionfinal .Contactfooter .contact_me .section2 .myAccount .aboutUs .ul_about .li_about span, .FooterFinal .Footer .section2 .Contactfooter .contact_me .myAccount .aboutUs .ul_about .li_about span, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .Contactfooter .contact_me .li_about span {
+    font-size: 11px;
+  }
+  .FooterFinal .Footer .section2 {
+    width: 99%;
+  }
+  .FooterFinal .Footer .section2 .ABOUT .title, .FooterFinal .Footer .section2 .myAccount .title, .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about {
+    font-size: 18px;
+  }
+  .FooterFinal .Footer .section2 .ABOUT .aboutUs .ul_about .li_about, .FooterFinal .Footer .section2 .myAccount .aboutUs .ul_about .li_about {
+    font-size: 12px;
+  }
+  .FooterFinal .final .createdBy {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=store.css.map */

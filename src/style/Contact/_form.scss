@@ -1,0 +1,157 @@
+.Form{
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    #form{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        .form{
+            width: 50%;
+            height: auto;
+            padding-bottom: 20px;
+            .text{
+                font: {
+                    size: 16px;
+                    family: var(--font-primary-2);
+                    weight: 100;
+                }
+                color: var(--clr-primary-6);
+                text-transform: uppercase;
+            }
+            .text2{
+                font: {
+                    size: 30px;
+                    family: var(--font-primary-4);
+                }
+                color: var(--clr-primary-2);
+                text-transform: capitalize;
+            }
+            .inputs{
+                width: 84%;
+                height: auto;
+                .input{
+                    @include input;
+                }
+                .textarea{
+                    height: 126px;
+                    @extend .input;
+                }
+                .submit{
+                    @include submit;
+                }
+            }
+        }
+        .rateclient{
+            width: 36%;
+            margin-top: 40px;
+            .clients{
+                width: 100%;
+                height: auto;
+                .client{
+                    width: 56%;
+                    height: auto;
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-top: 20px;
+                    .img{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        background: {
+                            size:cover;
+                            origin: border-box;
+                            repeat: no-repeat;
+                        };
+                    }
+                    .detail{
+                        .name{
+                            font: {
+                                size: 18px;
+                                family: var(--font-primary-2);
+                                weight: bold;
+                            }
+                            color: var(--clr-primary-2);
+                            text-transform: capitalize;
+                            margin-bottom: 5px;
+                        }
+                        .occupation{
+                            font: {
+                                size: 14px;
+                                family: var(--font-primary-2);
+                                weight: bold;
+                            }
+                            color: var(--clr-primary-2);
+                            text-transform: capitalize;
+                        }
+                        .phone{
+                            font-size: 15px;
+                            @extend .occupation;
+                            span{
+                                font: {
+                                    size: 14px;
+                                    weight: 100;
+                                }
+                                color: var(--clr-primary-6);
+                            }
+                        }
+                        .email{
+                            @extend .phone;
+                            text-transform: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .Form{
+        #form{
+            flex-wrap: wrap;
+            .form{
+                width: 100%;
+                margin-left: 10px;
+                .text{
+                    font: {
+                        size: 13px;
+                    }
+                }
+                .text2{
+                    font: {
+                        size: 20px;
+                    }
+                }
+                .inputs{
+                    width: 94%;
+                }
+            }
+            .rateclient{
+                width: 100%;
+                .clients{
+                    .client{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1200px){
+    .Form{
+        #form{
+            .rateclient{
+                .clients{
+                    width: 100%;
+                    .client{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

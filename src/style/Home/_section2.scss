@@ -1,0 +1,209 @@
+.New{
+    width: 100%;
+    height: auto;
+    .new{
+        .section1{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 40px;
+            .crazydealy{
+                width: 30%;
+                height: 393px;
+                border-radius: 5px;
+                background: {
+                    size: cover;
+                    origin: border-box;
+                    repeat: no-repeat
+                }
+                .Text{
+                    margin-left: 10px;
+                    margin-top: 23%;
+                    .title1{
+                        font: {
+                            family: var(--font-primary-3);
+                            size: 30px;
+                        }
+                        color: var(--clr-primary-3);
+                        text-transform: capitalize;
+                        margin-top: 10px;
+                    }
+                    .title2{
+                        @extend .title1;
+                        font-family: var(--font-primary-1);
+                    }
+                    .title3{
+                        @extend .title2;
+                        font-size: 12.5px;
+                        color: var(--clr-primary-6);
+                    }
+                    .link{
+                        .leareMore{
+                            width: 21%;
+                            height: 42px;
+                            margin-top: 10px;
+                            border-radius: 5px;
+                            border: 1px solid var(--clr-primary-1);
+                            background-color: transparent;
+                            font: {
+                                size: 17.5px;
+                            }
+                            @extend .title1;
+                            cursor: pointer;
+                            &:active{
+                                transform: scale(0.98);
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .section2{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+            padding-bottom: 30px;
+            margin-top: 20px;
+            .winterCollection{
+                width: 21%;
+                height: 240px;
+                border-radius: 5px;
+                background: {
+                    size: cover;
+                    origin: border-box;
+                    repeat: no-repeat
+                }
+                .Text{
+                    margin-left: 10px;
+                    margin-top: 23%;
+                    .title1{
+                        font: {
+                            family: var(--font-primary-3);
+                            size: 30px;
+                        }
+                        color: var(--clr-primary-3);
+                        text-transform: capitalize;
+                        margin-top: 10px;
+                    }
+                    .title2{
+                        @extend .title1;
+                        font-family: var(--font-primary-1);
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 580px) {
+    .New{
+        .new{
+            .section1{
+                flex-wrap: wrap;
+                .crazydealy{
+                    width: 94%;
+                    margin-bottom: 20px;
+                    .Text{
+                        .link{
+                            .leareMore{
+                                width: 38%;
+                            }
+                        }
+                    }
+                }
+            }
+            .section2{
+                flex-wrap: wrap;
+                .winterCollection{
+                    width: 95%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 581px) and (max-width: 720px) {
+    .New{
+        .new{
+            .section1{
+                .crazydealy{
+                    width: 45%;
+                    margin-bottom: 20px;
+                    .Text{
+                        .link{
+                            .leareMore{
+                                width: 38%;
+                            }
+                        }
+                    }
+                }
+            }
+            .section2{
+                flex-wrap: wrap;
+                .winterCollection{
+                    width: 95%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1020px) {
+    .New{
+        .new{
+            .section1{
+                .crazydealy{
+                    width: 45%;
+                    margin-bottom: 20px;
+                    .Text{
+                        .link{
+                            .leareMore{
+                                width: 47%;
+                            }
+                        }
+                    }
+                }
+            }
+            .section2{
+                flex-wrap: wrap;
+                .winterCollection{
+                    width: 41%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1026px) and (max-width: 1664px) {
+    .New{
+        .new{
+            .section1{
+                .crazydealy{
+                    width: 45%;
+                    margin-bottom: 20px;
+                    .Text{
+                        .link{
+                            .leareMore{
+                                width: 47%;
+                            }
+                        }
+                    }
+                }
+            }
+            .section2{
+                flex-wrap: wrap;
+                .winterCollection{
+                    width: 29%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

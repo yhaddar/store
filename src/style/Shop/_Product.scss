@@ -1,0 +1,141 @@
+.Product{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    .product{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .pro{
+            width: 22%;
+            height: auto;
+            background: var(--clr-primary-1);
+            margin-top: 30px;
+            border-radius: 5px;
+            border: 1px solid var(--clr-primary-6);
+            display: flex;
+            flex-wrap: nowrap;
+            .image{
+                width: 45%;
+                height: auto;
+                // background: var(--clr-primary-3);
+                // margin: 10px auto;
+                border-radius: 5px;
+                margin-left: 5px;
+                margin-top: auto;
+                margin-bottom: auto;
+                img{
+                    width: 97%;
+                    height: auto;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                }
+            }
+            .description{
+                margin: 20px 0 20px 20px;
+                .category{
+                    font: {
+                        size: 13px;
+                        family: var(--font-primary-2);
+                        weight: 100;
+                    }
+                    color: var(--clr-primary-6);
+                    text-transform: capitalize;
+                }
+                .widthtitle{
+                    width: 99.5%;
+                    height: 70px;
+                    margin-top: 10px;
+                    margin-bottom: -25px;
+                    .title{
+                        font: {
+                            size: 14px;
+                            family: var(--font-primary-2);
+                        }
+                        color: var(--clr-primary-2);
+                        text-transform: capitalize;
+                    }
+                }
+                .Rate{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+                    .rate{
+                        font: {
+                            size: 16px;
+                            family: var(--font-primary-2);
+                        }
+                        color: var(--clr-primary-2);
+                        text-transform: capitalize;
+                    }
+                    .imgeEtoile{
+                        width: 25px;
+                        height: 24px;
+                    }
+                }
+                .Price{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 30px;
+                    padding-right: 10px;                        
+                    .price{
+                        font: {
+                            size: 18px;
+                            family: var(--font-primary-2);
+                        }
+                        color: var(--clr-primary-2);
+                        text-transform: capitalize;
+                    }
+                    .Store{
+                        width: 40px;
+                        height: 40px;
+                        background: var(--clr-primary-5);
+                        border-radius: 50%;
+                        border: 1px solid var(--clr-primary-7);
+                        .link{
+                            text-decoration: none;
+                            .store_icon{
+                                width: 29px;
+                                height: 29px;
+                                color: var(--clr-primary-7);
+                                margin-left: 6px;
+                                margin-right: 6px;
+                                margin-top: 4px;
+                            }
+                            &:active{
+                                transform: scale(0.98);
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 572px) {
+    .Product{
+        .product{
+            width: 98%;
+            margin-left: auto;
+            margin-right: auto;
+            .pro{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 573px) and (max-width: 1030px) {
+    .Product{
+        .product{
+            .pro{
+                width: 49%;
+            }
+        }
+    }
+}

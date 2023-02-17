@@ -1,0 +1,26 @@
+.Location{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    .location{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        iframe{
+            width: 48%;
+            height: 460px;
+        }
+    }
+}
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .Location{
+        .location{
+            iframe{
+                width: 48%;
+                height: 200px;
+            }
+        }
+    }
+}

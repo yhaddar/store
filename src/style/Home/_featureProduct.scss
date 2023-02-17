@@ -1,0 +1,205 @@
+.FeatureProduct{
+    width: 100%;
+    height: auto;
+    padding-bottom: 90px;
+    padding-top: 53px;
+    .Title{
+        text-align: center;
+        padding-bottom: 20px;
+        .title{
+            @include title;
+        }
+        .title2{
+            @include title2;
+        }
+    }
+    .PRODUCT{
+        margin-top: 55px;
+        width: 100%;
+        height: auto;
+        .link{
+            text-decoration: none;
+            .pageShop{
+                float: right;
+                margin-right: 49px;
+                border: 1px solid var(--clr-primary-7);
+                padding: 2px 12px;
+                border-radius: 5px;
+                h1{
+                    font: {
+                        family: var(--font-primary-2);
+                        weight: 100;
+                        size: 14px;
+                    }
+                    color: var(--clr-primary-2);
+                }
+                .right{
+                    width: 20px;
+                    height: 20px;
+                    
+                }
+            }
+        }
+        .Product{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .product{
+                width: 22%;
+                height: auto;
+                background: var(--clr-primary-1);
+                margin-top: 30px;
+                border-radius: 5px;
+                border: 1px solid var(--clr-primary-6);
+                display: flex;
+                flex-wrap: nowrap;
+                .image{
+                    width: 45%;
+                    height: auto;
+                    border-radius: 5px;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    margin-left: 5px;
+                    img{
+                        width: 97%;
+                        height: auto;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                    }
+                }
+                .description{
+                    margin: 20px 0 20px 20px;
+                    .category{
+                        font: {
+                            size: 13px;
+                            family: var(--font-primary-2);
+                            weight: 100;
+                        }
+                        color: var(--clr-primary-6);
+                        text-transform: capitalize;
+                    }
+                    .widthtitle{
+                        width: 99.5%;
+                        height: 70px;
+                        margin-top: 10px;
+                        margin-bottom: -25px;
+                        .title{
+                            font: {
+                                size: 14px;
+                                family: var(--font-primary-2);
+                            }
+                            color: var(--clr-primary-2);
+                            text-transform: capitalize;
+                        }
+                    }
+                    .Rate{
+                        display: flex;
+                        align-items: center;
+                        margin-top: 10px;
+                        .rate{
+                            font: {
+                                size: 16px;
+                                family: var(--font-primary-2);
+                            }
+                            color: var(--clr-primary-2);
+                            text-transform: capitalize;
+                        }
+                        .imgeEtoile{
+                            width: 25px;
+                            height: 24px;
+                        }
+                    }
+                    .Price{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        margin-top: 30px;
+                        padding-right: 10px;                        
+                        .price{
+                            font: {
+                                size: 18px;
+                                family: var(--font-primary-2);
+                            }
+                            color: var(--clr-primary-2);
+                            text-transform: capitalize;
+                        }
+                        .Store{
+                            width: 40px;
+                            height: 40px;
+                            background: var(--clr-primary-5);
+                            border-radius: 50%;
+                            border: 1px solid var(--clr-primary-7);
+                            .link{
+                                text-decoration: none;
+                                .store_icon{
+                                    width: 29px;
+                                    height: 29px;
+                                    color: var(--clr-primary-7);
+                                    margin-left: 6px;
+                                    margin-right: 6px;
+                                    margin-top: 4px;
+                                }
+                                &:active{
+                                    transform: scale(0.98);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 572px) {
+    .FeatureProduct{
+        .Title{
+            .title{
+                @include title;
+            }
+            .title2{
+                @include title2;
+            }
+        }
+        .PRODUCT{
+            .Product{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                .product{
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+    
+        }
+    }
+}
+@media screen and (min-width: 573px) and (max-width: 1030px) {
+    .FeatureProduct{
+        .Title{
+            .title{
+                @include title;
+            }
+            .title2{
+                @include title2;
+            }
+        }
+        .PRODUCT{
+            .Product{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: none;
+                .product{
+                    width: 49%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+    
+        }
+    }
+}

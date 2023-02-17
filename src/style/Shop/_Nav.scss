@@ -1,0 +1,50 @@
+.StayHome{
+    width: 100%;
+    height: auto;
+    padding-top: 152px;
+    .stayHome{
+        width: 100%;
+        height: auto;
+        background: {
+            size: cover;
+            origin: border-box;
+            repeat: no-repeat;
+        }
+        padding-bottom: 31px;
+        .title{
+            text-align: center;
+            padding-top: 10px;
+            .stayHomeTitle{
+                font: {
+                    size: 45px;
+                    family: var(--font-primary-3);
+                    weight: bold;
+                    style: normal;
+                }
+                color: var(--clr-primary-3);
+            }
+            .stayHomeTitle2{
+                @include title4;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 746px) {
+    .StayHome{
+        .stayHome{
+            .title{
+                .stayHomeTitle{
+                    font: {
+                        size: 27px;
+                    }
+                }
+                .stayHomeTitle2{
+                    font: {
+                        size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}

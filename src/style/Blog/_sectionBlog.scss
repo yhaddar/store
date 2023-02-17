@@ -1,0 +1,161 @@
+.SectionBlog{
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+    .sectionBlog1{
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        .section_blog{
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: nowrap;
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid var(--clr-primary-2);
+            .Date{
+                width: 44%;
+                height: auto;
+                border-radius: 5px;
+                border: 1px dashed var(--clr-primary-6);
+                .date{
+                    font: {
+                        size: 75px;
+                        family: var(--font-primary-3);
+                    }
+                    color: var(--clr-primary-1);
+                    text-align: center;
+                }
+                .imgCover{
+                    width: 100%;
+                    height: 300px;
+                    background: {
+                        size: cover;
+                        origin: border-box;
+                        repeat: no-repeat;
+                    }
+                    margin-top: -13px;
+                }
+            }
+        }
+        .description{
+            margin-top: 77px;
+            margin-left: 20px;
+            .title{
+                font: {
+                    size: 21px;
+                    family: var(--font-primary-2);
+                }
+                color: var(--clr-primary-2);
+                text: {
+                    decoration: underline;
+                    transform: capitalize;
+                }
+            }
+            .parag{
+                font: {
+                    size: 15px;
+                    family: var(--font-primary-2);
+                    style: italic;
+                }
+                color: var(--clr-primary-1);
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width: 52%;
+            }
+            .continueLoading{
+                color: var(--clr-primary-2);
+                margin-left: 10px;
+                font: {
+                    size: 12px;
+                    family: var(--font-primary-2);
+                    weight: bold;
+                }
+                text-decoration: none;
+                text-transform: uppercase;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 3%;
+                    height: 3px;
+                    background: var(--clr-primary-2);
+                    margin-top: 9px;
+                    border-radius: 5px;
+                    margin-left: 10px;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 660px) {
+    .SectionBlog{
+        .sectionBlog1{
+            width: 97%;
+            .section_blog{
+                display: flex;
+                flex-wrap: wrap;
+                .Date{
+                    width: 100%;
+                }
+            }
+            .description{
+                margin-top: 12px;
+                margin-left: 0;
+                .title{
+                    font: {
+                        size: 17px;
+                    }
+                    text: {
+                        align: center;
+                    }
+                }
+                .parag{
+                    font: {
+                        size: 14px;
+                    }
+                    width: 100%;
+                    text-align: center;
+                }
+                .continueLoading{
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: flex;
+                    justify-content: center;
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 661px) and (max-width: 1020px) {
+    .SectionBlog{
+        .sectionBlog1{
+            width: 97%;
+            .section_blog{
+                width: 100%;
+                .Date{
+                    width: 238%;
+                }
+            }
+            .description{
+                .title{
+                    font: {
+                        size: 17px;
+                    }
+                }
+                .parag{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

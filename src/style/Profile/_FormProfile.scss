@@ -1,0 +1,53 @@
+.FormProfile{
+    width: 100%;
+    height: 400px;
+    padding-top: 50px;
+    .form{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        #form{
+            .Inputs{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 30px;
+                border: 1px solid var(--clr-primary-2);
+                border-radius: 3px;
+                .logo{
+                    font: {
+                        family: var(--font-logo);
+                        style: italic;
+                        weight: bold;
+                        size: 35px;
+                    }
+                    color: var(--clr-primary-2);
+                    text-transform: capitalize;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .connect{
+                    font: {
+                        family: var(--font-primary-2);
+                        weight: bold;
+                        size: 20px;
+                    }
+                    color: var(--clr-primary-2);
+                    text-transform: capitalize;
+                }
+                .inputs{
+                    @include input;
+                    width: 86%;
+                }
+                .submit{
+                    @include submit;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

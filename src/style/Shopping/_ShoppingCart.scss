@@ -1,0 +1,212 @@
+.MyProduct{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    padding-top: 20px;
+    .myproduct{
+        width: 92%;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        .section1{
+            width: 20%;
+            height: 108px;
+            .nav{
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border: {
+                    top: 1px solid var(--clr-primary-2);
+                    bottom: 1px solid var(--clr-primary-2);
+                };
+                h1{
+                    font: {
+                        size: 15px;
+                        family: var(--font-primary-2);
+                        weight: bold;
+                    }
+                    color: var(--clr-primary-2);
+                    text-transform: uppercase;
+                }
+            }
+            .content{
+                width: 100%;
+                height: 61%;
+                display: flex;
+                justify-content: center;
+                padding-top: 17px;
+                border-bottom: 1px solid var(--clr-primary-2);
+                .iconClose{
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    &:active{
+                        transform: scale(0.98);
+                    }
+                }
+            }
+        }
+        .section2{
+            @extend .section1;
+            .content2{
+                width: 100%;
+                height: 61%;
+                display: flex;
+                justify-content: center;
+                padding-top: 9px;
+                padding-bottom: 8px;
+                border-bottom: 1px solid var(--clr-primary-2);
+                .Img{
+                    width: 50px;
+                    height: 50px;
+                    background: {
+                        size: cover;
+                        origin: border-box;
+                        repeat: no-repeat;
+                    }
+                }
+            }
+        }
+        .section3{
+            @extend .section1;
+            .content3{
+                width: 100%;
+                height: 61%;
+                padding-top: 13px;
+                border-bottom: 1px solid var(--clr-primary-2);
+                h1{
+                    font: {
+                        size: 12px;
+                        family: var(--font-primary-2);
+                        weight: 100;
+                    }
+                    color: var(--clr-primary-6);
+                    text-align: center;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .section4{
+            @extend .section1;
+            .content4{
+                width: 100%;
+                height: 61%;
+                padding-top: 13px;
+                border-bottom: 1px solid var(--clr-primary-2);
+                h1{
+                    font: {
+                        size: 19px;
+                        family: var(--font-primary-2);
+                        weight: 100;
+                    }
+                    color: var(--clr-primary-2);
+                    text-align: center;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .section5{
+            @extend .section1;
+            .content5{
+                width: 100%;
+                height: 61%;
+                padding-top: 13px;
+                border-bottom: 1px solid var(--clr-primary-2);
+                h1{
+                    font: {
+                        size: 19px;
+                        family: var(--font-primary-2);
+                        weight: 100;
+                    }
+                    color: var(--clr-primary-2);
+                    text-align: center;
+                    text-transform: capitalize;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center
+                }
+            }
+        }
+        .section6{
+            @extend .section1;
+            .content6{
+                width: 100%;
+                height: 61%;
+                padding-top: 13px;
+                border-bottom: 1px solid var(--clr-primary-2);
+                h1{
+                    font: {
+                        size: 19px;
+                        family: var(--font-primary-2);
+                        weight: 100;
+                    }
+                    color: var(--clr-primary-2);
+                    text-align: center;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .MyProduct{
+        .myproduct{
+            .section1{
+                .nav{
+                    h1{
+                        font: {
+                            size: 10px;
+                        }
+                    }
+                }
+                .content{
+                    .iconClose{
+                        width: 23px;
+                        height: 30px;
+                    }
+                }
+            }
+            .section3{
+                .content3{
+                    h1{
+                        font: {
+                            size: 6px;
+                        }
+                    }
+                }
+            }
+            .section4{
+                .content4{
+                    h1{
+                        font: {
+                            size: 12px;
+                        }
+                    }
+                }
+            }
+            .section5{
+                @extend .section1;
+                .content5{
+                    h1{
+                        font: {
+                            size: 12px;
+                        }
+                    }
+                }
+            }
+            .section6{
+                .content6{
+                    h1{
+                        font: {
+                            size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

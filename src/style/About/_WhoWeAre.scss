@@ -1,0 +1,124 @@
+.identification{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    padding-top: 20px;
+    .identy{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        .image{
+            width: 27%;
+            border: 1px solid var(--clr-primary-2);
+            border-radius: 5px;
+            height: auto;
+            background: {
+                origin: border-box;
+                size: cover;
+                repeat: no-repeat;
+            }
+        }
+        .parg{
+            width: 45%;
+            height: 500px;
+            padding-top: 50px;
+            padding-left: 20px;
+            .Title{
+                margin-bottom: 10px;
+                .title{
+                    font: {
+                        size: 31px;
+                        family: var(--font-primary-4);
+                        weight: bold;
+                    }
+                    color: var(--clr-primary-2);
+                    text: {
+                        decoration: underline;
+                        transform: capitalize;
+                    };
+                }
+            }
+            .Desc{
+                width: 90%;
+                margin-bottom: 10px;
+                .desc{
+                    font: {
+                        size: 13px;
+                        family: var(--font-primary-2);
+                    }
+                    color: var(--clr-primary-6);
+                    text-transform: capitalize;
+                }
+            }
+            .Parg2{
+                width: 81%;
+                margin-bottom: 10px;
+                .parg2{
+                    font: {
+                        size: 13px;
+                        family: var(--font-primary-2);
+                    }
+                    color: var(--clr-primary-2);
+                    text-transform: capitalize;
+                }
+            }
+            .Marquee{
+                width: 81%;
+                .marquee{
+                    background: var(--clr-primary-1);
+                    border-radius: 2px;
+                    z-index: -1;
+                    span{
+                        font: {
+                            size: 12px;
+                            family: var(--font-primary-2);
+                        }
+                        color: var(--clr-primary-2);
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 890px) {
+    .identification{
+        padding-bottom: 0;
+        .identy{
+            flex-wrap: wrap;
+            .image{
+                width: 55%;
+                height: 300px;
+            }
+            .parg{
+                width: 100%;
+                .Title{
+                    text-align: center;
+                }
+                .Desc{
+                    width: 99%;
+                    .desc{
+                        font: {
+                            size: 12px;
+                        }
+                    }
+                }
+                .Parg2{
+                    width: 99%;
+                    margin-bottom: 10px;
+                    .parg2{
+                        font: {
+                            size: 10px;
+                        }
+                    }
+                }
+                .Marquee{
+                    width: 99%;
+                }
+            }
+        }
+    }
+}
