@@ -28,7 +28,7 @@
 #### Get all items
 
 ```http
-  http://store2.eb2a.com/
+  https://fakestoreapi.com/
 ```
 
 
